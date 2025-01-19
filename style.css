@@ -34,17 +34,17 @@ nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 500;
 }
 
-/* MAIN */
+/* MAIN (COVER) */
 
 .cover {
     padding: 0 30px;
@@ -80,4 +80,135 @@ nav ul li a {
     left: 0;
     background: #000000;
     opacity: 0.3;
+}
+
+/* MAIN (SOBRE) */
+
+/* 1/3 */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
+    flex-wrap: nowrap;
+    gap: 35px;
+}
+
+#sobre > div {
+    display: flex;
+}
+
+#sobre div p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+}
+
+#sobre > div:first-of-type {
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333333;
+}
+
+.medico-e-lista {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.medico-e-lista > img {
+    height: 80%;
+}
+
+.medico-e-lista > div {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: left;
+    gap: 30px;
+}
+
+.medico-e-lista > div > span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.medico-e-lista > div > ul {
+    padding-left: 40px;
+}
+
+.medico-e-lista > div > ul > li {
+    font-size: 18px;
+    line-height: 27px;
+    list-style: disc;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* 2/3 */
+
+#sobre > div:last-of-type {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+figure {
+    width: calc(20%);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 1px #aaaaaa;
+    transition: transform 0.3s ease;
+}
+
+figcaption {
+    line-height: 60px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#sobre > div:last-of-type figure img {
+    width: 100%;
+}
+
+/* 3/3 */
+
+#sobre a {
+    margin-top: 10px;
+    background: #00cad1;
+    width: 250px;
+    height: 60px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
