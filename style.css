@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    height: 100%;
+    height: 70%;
 }
 
 nav ul {
@@ -255,4 +255,119 @@ footer {
 footer > p {
     text-align: center;
     font-size: 15px;
+}
+
+/*================== especialidades.html =====================*/
+
+.main-especialidades {
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    min-height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.menu li {
+    height: 27px;
+    border-bottom: 3px solid #00cad1;
+}
+
+.menu li a {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.main-especialidades > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main-especialidades > div > p {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.imagem-e-tabela {
+    padding: 0 10px 10px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+}
+
+.imagem-e-tabela table {
+    border-collapse: collapse;
+    margin-left: 240px;
+    height: 220px;
+    width: 560px;
+    position: relative;
+}
+
+.imagem-e-tabela table::before { /* imagem */
+    content: "";
+    height: 100%;
+    width: 240px;
+    top: 0;
+    left: -240px;
+    box-shadow: 0 0 5px 0px #aaaaaa;
+    position: absolute;
+}
+.imagem-e-tabela .tabela-ortopedia::before {
+    background: url("assets/ortopedia.png");
+    background-size: cover;
+    background-position: -20px 0px;
+}
+.imagem-e-tabela .tabela-pediatria::before {
+    background: url("assets/pediatra2.png");
+    background-size: cover;
+    background-position: -25px 0px;
+}
+.imagem-e-tabela .tabela-geriatria::before {
+    background: url("assets/geriatra.png");
+    background-size: cover;
+    background-position: 0px 0px;
+}
+.imagem-e-tabela .tabela-psicologia::before {
+    background: url("assets/psicologo.png");
+    background-size: cover;
+    background-position: 0px 0px;
+}
+.imagem-e-tabela .tabela-fisioterapia::before {
+    background: url("assets/fisioterapia.png");
+    background-size: cover;
+}
+
+.imagem-e-tabela table td, .imagem-e-tabela table th {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.imagem-e-tabela table th {
+    padding: 10px;
+    background: #00cad1;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.imagem-e-tabela table tbody tr:nth-of-type(odd) {
+    background: #e1e1e1;
+}
+.imagem-e-tabela table tbody tr:nth-of-type(even) {
+    background: #eeeeee;
 }
