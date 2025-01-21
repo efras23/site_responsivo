@@ -238,3 +238,21 @@ figcaption {
 #contato > iframe:hover {
     filter: grayscale(0%);
 }
+
+/* RODAPÉ */
+
+footer {
+    background: #0c6e71;
+    color: #ffffff;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 15px;
+}
