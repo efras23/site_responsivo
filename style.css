@@ -212,3 +212,29 @@ figcaption {
     justify-content: center;
     align-items: center;
 }
+
+/* CONTATO */
+
+#contato {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#contato p {
+    text-align: center;
+}
+
+#contato > iframe {
+    margin-top: 10px;
+    width: calc(100% + 60px);
+    height: 400px;
+    filter: grayscale(100%);
+}
+
+#contato > iframe:hover {
+    filter: grayscale(0%);
+}
