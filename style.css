@@ -5,29 +5,32 @@
     font-family: 'Montserrat';
 }
 
-header, footer {
-    padding: 0 30px;
-}
-
-ul {
-    list-style: none;
-}
-
-/* HEADER */
-
-header {
-    background: #00cad1;
-    width: 100%;
-    height: 80px;
-    display: flex;
+.limite-conteudo {
+    display: none;
+    height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
+/* HEADER */
+
+header, footer {
+    padding: 0 30px;
+}
+
+header {
+    background: #00cad1;
+    width: 100%;
+}
+
 .logo {
     height: 70%;
+}
+
+ul {
+    list-style: none;
 }
 
 nav ul {
@@ -40,20 +43,19 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 500;
 }
 
 /* MAIN (COVER) */
 
-.cover {
+#cover {
     padding: 0 30px;
     background: url("assets/recepcao2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,16 +64,7 @@ nav ul li a {
     position: relative;
 }
 
-.cover span {
-    display: block;
-    font-size: 47px;
-    color: #ffffff;
-    font-weight: 500;
-    text-transform: uppercase;
-    z-index: 1;
-}
-
-.cover::after {
+#cover::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -82,9 +75,16 @@ nav ul li a {
     opacity: 0.3;
 }
 
-/* MAIN (SOBRE) */
+#cover span {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 1;
+}
 
-/* 1/3 */
+
+/* MAIN (SOBRE) */
 
 #sobre {
     display: flex;
@@ -106,7 +106,6 @@ nav ul li a {
 }
 
 #sobre > div:first-of-type {
-    max-width: 800px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -120,8 +119,6 @@ h2 {
 }
 
 .medico-e-lista {
-    width: 100%;
-    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -148,11 +145,12 @@ h2 {
 }
 
 .medico-e-lista > div > ul {
+    min-width: 487px;
     padding-left: 40px;
 }
 
 .medico-e-lista > div > ul > li {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 27px;
     list-style: disc;
 }
@@ -162,8 +160,6 @@ h3 {
     font-weight: 600;
     color: #333333;
 }
-
-/* 2/3 */
 
 #sobre > div:last-of-type {
     width: 100%;
@@ -196,8 +192,6 @@ figcaption {
     width: 100%;
 }
 
-/* 3/3 */
-
 #sobre a {
     margin-top: 10px;
     background: #00cad1;
@@ -213,8 +207,6 @@ figcaption {
     align-items: center;
 }
 
-/* CONTATO */
-
 #contato {
     padding: 0 30px;
     display: flex;
@@ -226,6 +218,9 @@ figcaption {
 
 #contato p {
     text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
 }
 
 #contato > iframe {
@@ -244,12 +239,12 @@ figcaption {
 footer {
     background: #0c6e71;
     color: #ffffff;
-    padding: 50px 30px;
+    padding: 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 footer > p {
@@ -274,7 +269,7 @@ footer > p {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 23px;
+    gap: 40px;
 }
 
 .menu li {
@@ -370,4 +365,102 @@ footer > p {
 }
 .imagem-e-tabela table tbody tr:nth-of-type(even) {
     background: #eeeeee;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* HEADER */
+
+    .limite-conteudo {
+        display: flex;
+        width: 100%;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    #cover {
+        height: calc(100vh - 80px);
+    }
+
+    #cover > span {
+        font-size: 43px;
+    }
+
+    #sobre > div:first-of-type {
+        max-width: 800px;
+    }
+
+    .medico-e-lista {
+        width: 100%;
+        height: 400px;
+        justify-content: center;
+    }
+
+    .medico-e-lista > img {
+        height: 70%;
+    }
+
+    .medico-e-lista > div > ul > li {
+        font-size: 17px;
+    }
+
+    #contato p {
+        font-size: 15px;
+    }
+
+    #contato > iframe {
+        height: 300px;
+    }
+
+    .imagem-e-tabela > table > tbody > tr > td {
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen and (min-width: 1025px){
+    .limite-conteudo {
+        display: flex;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    header {
+        height: 80px;
+    }
+    
+    #cover {
+        height: calc(100vh - 80px);
+    }
+
+    #cover > span {
+        font-size: 47px;
+    }
+
+    #sobre > div:first-of-type {
+        max-width: 800px;
+    }
+
+    .medico-e-lista {
+        width: 100%;
+        height: 400px;
+        justify-content: space-around;
+    }
+
+    .medico-e-lista > div > ul > li {
+        font-size: 18px;
+    }
+
+    #contato p {
+        font-size: 17px;
+    }
+
+    #contato > iframe {
+        height: 400px;
+    }
+
+    .imagem-e-tabela > table > tbody > tr > td {
+        font-size: 16px;
+    }
 }
